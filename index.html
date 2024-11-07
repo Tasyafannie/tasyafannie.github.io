@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PENDAFTARAN UNDIKNAS UNIVERSITY</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+
+        header {
+            width: 200px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        header h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            text-align: left;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #27253f;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        section, article {
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        aside {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #373737;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 4px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s;
+        }
+
+        .notification.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>UNDIKNAS UNIVERSITY</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Akreditasi</a>
+            <a href="#">Kurikulum</a>
+            <a href="#">Informasi</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>SELAMAT DATANG DI PENDAFATARAN MAHASISWA UNDIKNAS 2024</h2>
+            <p>tahun baru untuk membuka lembaran baru</p>
+        </section>
+
+        <article>
+            <h2>INFORMASI</h2>
+            <p>Universitas Pendidikan Nasional, disingkat Undiknas adalah sebuah perguruan tinggi swasta di Denpasar</p>
+            <img src="https://d22gwcrfo2de51.cloudfront.net/wp-content/uploads/2020/08/logo_Universitas-Pendidikan-Nasional.png" alt="Sample Image">
+        </article>
+
+        <aside>
+            <h3>FORM YOUR EMAIL ADDRESS</h3>
+            <p>Kami akan mengirimkan informasi mengenai pendafatrannya ke email anda.</p>
+        </aside>
+
+        <form id="notificationForm">
+            <label for="userInput">Enter your Email:</label>
+            <input type="text" id="userInput" placeholder="tulis emailnya dengan benar">
+            <button type="button" onclick="showNotification()">Confirm</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; undiknas pendaftaran 2025</p>
+    </footer>
+
+    <div class="notification" id="notification">terimakasih di tunggu !</div>
+
+    <script>
+        function showNotification() {
+            var notification = document.getElementById('notification');
+            notification.classList.add('show');
+
+            setTimeout(function() {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
